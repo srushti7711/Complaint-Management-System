@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaint Details</title>
+    <link rel="stylesheet" th:href="@{/css/complaint-style.css}">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">Complaint Details</div>
+    <div class="top-actions">
+        <a th:href="@{/complaints}" class="btn btn-light">⬅ Back to List</a>
+    </div>
+</header>
+
+<main class="page">
+    <section class="detail-card">
+        <h2 th:text="${complaint.title}">Complaint Title</h2>
+
+        <div class="detail-grid">
+            <div>
+                <strong>Category:</strong>
+                <span th:text="${complaint.category}"></span>
+            </div>
+            <div>
+                <strong>Status:</strong>
+                <span th:text="${complaint.status}"></span>
+            </div>
+            <div>
+                <strong>Priority:</strong>
+                <span th:text="${complaint.priority}"></span>
+            </div>
+            <div>
+                <strong>Department:</strong>
+                <span th:text="${complaint.department}"></span>
+            </div>
+            <div>
+                <strong>Student:</strong>
+                <span th:text="${complaint.studentName}"></span>
+            </div>
+            <div>
+                <strong>Phone:</strong>
+                <span th:text="${complaint.phone}"></span>
+            </div>
+            <div>
+                <strong>Email:</strong>
+                <span th:text="${complaint.email}"></span>
+            </div>
+            <div>
+                <strong>Created:</strong>
+                <span th:text="${complaint.createdDate}"></span>
+            </div>
+            <div>
+                <strong>Resolved:</strong>
+                <span th:text="${complaint.resolvedDate}"></span>
+            </div>
+        </div>
+
+        <h3>Description</h3>
+        <p th:text="${complaint.description}"></p>
+    </section>
+</main>
+
+</body>
+</html>

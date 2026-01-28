@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaint Management - Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/complaint-style.css}">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">Complaint Management System</div>
+    <div class="top-actions">
+        <a th:href="@{/complaints}" class="btn">View / Search Complaints</a>
+        <a th:href="@{/complaints/new}" class="btn btn-primary">+ Register Complaint</a>
+    </div>
+</header>
+
+<main class="page">
+
+    <section class="stats-grid">
+        <div class="stat-card total">
+            <h3>Total Complaints</h3>
+            <p class="value" th:text="${total}">0</p>
+        </div>
+        <div class="stat-card open">
+            <h3>Open Complaints</h3>
+            <p class="value" th:text="${open}">0</p>
+        </div>
+        <div class="stat-card resolved">
+            <h3>Resolved / Closed</h3>
+            <p class="value" th:text="${resolved}">0</p>
+        </div>
+    </section>
+
+    <section class="table-section">
+        <div class="section-header">
+            <h2>Recent Complaints</h2>
+            <a th:href="@{/complaints}" class="link">View All ➜</a>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Student</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Department</th>
+                <th>Created</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="c : ${complaints}">
+                <td th:text="${c.title}"></td>
+                <td th:text="${c.studentName}"></td>
+                <td th:text="${c.category}"></td>
+                <td th:text="${c.priority}"></td>
+                <td th:text="${c.status}"></td>
+                <td th:text="${c.department}"></td>
+                <td th:text="${c.createdDate}"></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(complaints)}">
+                <td colspan="7">No complaints found.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+</body>
+</html>

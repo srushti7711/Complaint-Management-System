@@ -1,0 +1,28 @@
+INSERT INTO complaints
+(title, description, category, status, priority, department, student_name, email, phone, created_date, resolved_date)
+VALUES
+('Hostel WiFi not working', 'Internet connectivity is very poor in hostel block A.', 'Internet / IT', 'New', 'High', 'IT Support', 'Ravi Patil', 'ravi1@example.com', '9876500001', '2025-01-05', NULL),
+('Library fan not working', 'Ceiling fan near window is not working.', 'Library', 'In Progress', 'Medium', 'Maintenance', 'Neha Kulkarni', 'neha2@example.com', '9876500002', '2025-01-03', NULL),
+('Bus driver rude behavior', 'Driver of route 3 behaved rudely with students.', 'Transport', 'New', 'High', 'Administration', 'Ajay Deshmukh', 'ajay3@example.com', '9876500003', '2025-01-10', NULL),
+('Mess food quality issue', 'Food served in mess yesterday was stale.', 'Hostel', 'Resolved', 'High', 'Hostel', 'Pooja Jadhav', 'pooja4@example.com', '9876500004', '2025-01-02', '2025-01-04'),
+('Exam timetable clash', 'Two practical exams scheduled on same date.', 'Exam', 'In Progress', 'Critical', 'Examination', 'Sahil Khan', 'sahil5@example.com', '9876500005', '2025-01-07', NULL),
+('Fees receipt not generated', 'Online portal not showing receipt after payment.', 'Fees / Accounts', 'Resolved', 'Medium', 'Accounts', 'Aarti Shah', 'aarti6@example.com', '9876500006', '2025-01-01', '2025-01-03'),
+('Projector not working in lab 301', 'Unable to start projector during presentation.', 'Campus Facility', 'New', 'High', 'IT Support', 'Kiran Salunkhe', 'kiran7@example.com', '9876500007', '2025-01-09', NULL),
+('Cleanliness issue in washroom', 'Ground floor washroom not cleaned properly.', 'Campus Facility', 'Closed', 'Medium', 'Maintenance', 'Meena Rao', 'meena8@example.com', '9876500008', '2024-12-28', '2024-12-29'),
+('ID card printing delay', 'Submitted form 10 days back, still no ID card.', 'Administration', 'New', 'Low', 'Administration', 'Swapnil Joshi', 'swapnil9@example.com', '9876500009', '2025-01-06', NULL),
+('Hostel gate closing early', 'Security is closing hostel gate before time.', 'Hostel', 'In Progress', 'Medium', 'Hostel', 'Shravani Kale', 'shravani10@example.com', '9876500010', '2025-01-08', NULL),
+('Lab PCs very slow', 'Systems in computer lab 2 are very slow.', 'Internet / IT', 'Resolved', 'High', 'IT Support', 'Tejas More', 'tejas11@example.com', '9876500011', '2024-12-30', '2025-01-02'),
+('Wrong marks uploaded', 'Internal marks uploaded incorrectly for subject DBMS.', 'Exam', 'New', 'High', 'Examination', 'Ashwini Patil', 'ashwini12@example.com', '9876500012', '2025-01-11', NULL),
+('Parking space issue', 'Not enough parking for two wheelers.', 'Campus Facility', 'New', 'Medium', 'Administration', 'Mandar Gokhale', 'mandar13@example.com', '9876500013', '2025-01-03', NULL),
+('Scholarship form clarification', 'Need help for filling scholarship portal.', 'Other', 'Closed', 'Low', 'Accounts', 'Sneha Naik', 'sneha14@example.com', '9876500014', '2024-12-20', '2024-12-22'),
+('Water cooler not working', 'Water cooler near classroom 204 is not cooling.', 'Campus Facility', 'In Progress', 'Medium', 'Maintenance', 'Rahul Shinde', 'rahul15@example.com', '9876500015', '2025-01-04', NULL),
+('Wrong library fine', 'System showing extra fine even after returning book.', 'Library', 'Resolved', 'Medium', 'Library', 'Shital Lokare', 'shital16@example.com', '9876500016', '2024-12-18', '2024-12-19'),
+('Ragging incident in hostel', 'Senior students misbehaved with juniors.', 'Hostel', 'In Progress', 'Critical', 'Administration', 'Prathamesh Rao', 'pratham17@example.com', '9876500017', '2025-01-12', NULL),
+('Transport bus always late', 'Morning bus for route 5 always late by 15 minutes.', 'Transport', 'New', 'Medium', 'Administration', 'Divya Patil', 'divya18@example.com', '9876500018', '2025-01-05', NULL),
+('Fan noise in classroom', 'Ceiling fan making loud noise while running.', 'Campus Facility', 'Closed', 'Low', 'Maintenance', 'Omkar Sathe', 'omkar19@example.com', '9876500019', '2024-12-25', '2024-12-27'),
+('Hostel room allocation problem', 'Allocated room already occupied by other students.', 'Hostel', 'Resolved', 'High', 'Hostel', 'Gauri Desai', 'gauri20@example.com', '9876500020', '2024-12-29', '2025-01-01'),
+('Lost item in library', 'Lost calculator in library reading hall.', 'Library', 'New', 'Low', 'Library', 'Ranjit Pawar', 'ranjit21@example.com', '9876500021', '2025-01-09', NULL),
+('Noise in exam hall', 'Construction work noise near exam hall.', 'Exam', 'In Progress', 'High', 'Examination', 'Vaishnavi Joshi', 'vaishnavi22@example.com', '9876500022', '2025-01-10', NULL),
+('WiFi login problem', 'Unable to login to campus WiFi using credentials.', 'Internet / IT', 'Resolved', 'Medium', 'IT Support', 'Akash More', 'akash23@example.com', '9876500023', '2024-12-31', '2025-01-02'),
+('Classroom lights not working', 'Two tube lights fused in room 105.', 'Campus Facility', 'Closed', 'Low', 'Maintenance', 'Pallavi Kamat', 'pallavi24@example.com', '9876500024', '2024-12-21', '2024-12-23'),
+('Fee concession request pending', 'Submitted documents for concession but no update.', 'Fees / Accounts', 'New', 'Medium', 'Accounts', 'Yogesh Patil', 'yogesh25@example.com', '9876500025', '2025-01-06', NULL);

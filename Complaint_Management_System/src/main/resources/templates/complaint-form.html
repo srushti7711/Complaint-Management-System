@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaint Form</title>
+    <link rel="stylesheet" th:href="@{/css/complaint-style.css}">
+</head>
+<body>
+
+<header class="topbar">
+    <h2 th:text="${complaint.id} == null ? 'Register Complaint' : 'Edit Complaint'"></h2>
+
+    <a th:href="@{/complaints}" class="btn btn-light">⬅ Back</a>
+</header>
+
+<div class="container">
+    <form th:action="@{/complaints/save}" th:object="${complaint}" method="post">
+
+        <input type="hidden" th:field="*{id}"/>
+
+        <label>Title</label>
+        <input type="text" th:field="*{title}" placeholder="Enter title" required/>
+
+        <label>Description</label>
+        <textarea th:field="*{description}" placeholder="Enter description" required></textarea>
+
+        <label>Category</label>
+        <select th:field="*{category}" required>
+            <option value="">-- Select --</option>
+            <option value="Hostel">Hostel</option>
+            <option value="Library">Library</option>
+            <option value="Canteen">Canteen</option>
+            <option value="Transport">Transport</option>
+        </select>
+
+        <label>Priority</label>
+        <select th:field="*{priority}" required>
+            <option value="">-- Select --</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label>Status</label>
+        <select th:field="*{status}" required>
+            <option value="">-- Select --</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+
+        <label>Department</label>
+        <select th:field="*{department}" required>
+            <option value="">-- Select --</option>
+            <option value="IT">IT</option>
+            <option value="Admin">Admin</option>
+            <option value="Office">Office</option>
+        </select>
+
+        <label>Student Name</label>
+        <input type="text" th:field="*{studentName}" required/>
+
+        <label>Phone</label>
+        <input type="text" th:field="*{phone}" required/>
+
+        <label>Email</label>
+        <input type="email" th:field="*{email}" required/>
+
+        <button type="submit" class="btn btn-primary full">
+            Save Complaint
+        </button>
+    </form>
+</div>
+
+</body>
+</html>

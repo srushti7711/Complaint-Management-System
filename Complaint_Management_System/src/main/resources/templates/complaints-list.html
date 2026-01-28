@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaints List</title>
+    <link rel="stylesheet" th:href="@{/css/complaint-style.css}">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">Complaint Management</div>
+    <div class="top-actions">
+        <a th:href="@{/complaints/new}" class="btn btn-primary">+ Register Complaint</a>
+        <a th:href="@{/}" class="btn btn-light">Dashboard</a>
+    </div>
+</header>
+
+<main class="page">
+    <section class="filter-bar">
+        <form method="get" th:action="@{/complaints}">
+            <input type="text" name="keyword" th:value="${keyword}"
+                   placeholder="Search by title / category / status / student">
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </section>
+
+    <section class="table-section">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Department</th>
+                <th>Student</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="c : ${complaints}">
+                <td th:text="${c.title}"></td>
+                <td th:text="${c.category}"></td>
+                <td th:text="${c.status}"></td>
+                <td th:text="${c.priority}"></td>
+                <td th:text="${c.department}"></td>
+                <td th:text="${c.studentName}"></td>
+                <td th:text="${c.createdDate}"></td>
+                <td>
+                    <a th:href="@{'/complaints/view/' + ${c.id}}" class="btn btn-sm">View</a>
+                    <a th:href="@{'/complaints/edit/' + ${c.id}}" class="btn btn-sm edit">Edit</a>
+                    <a th:href="@{'/complaints/delete/' + ${c.id}}"
+                       class="btn btn-sm delete"
+                       onclick="return confirm('Delete this complaint?');">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+
+            <tr th:if="${#lists.isEmpty(complaints)}">
+                <td colspan="8">No complaints found.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>
